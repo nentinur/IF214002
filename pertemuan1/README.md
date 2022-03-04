@@ -5,6 +5,6 @@
 4. Instalasi DBeaver
 
 ## Hasil
-[ERD Draw.io] (./pertemuan1.drawio)
+[ERD Draw.io](./pertemuan1.drawio)
 
 ## Kendala
