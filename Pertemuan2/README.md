@@ -1,4 +1,4 @@
-# Aplikasi Bimbel Intensif Online
+# Aplikasi Pembelajaran Program Tahfidz Berbasis Online
 
 ## Deskripsi:
 Dimasa pandemi ini banyak kegitan yang sebelumnya dilakukan secara offline, kini harus berpindah ke online, tak terkecuali di bidang pembelajaran.
@@ -13,35 +13,36 @@ Aplikasi ini bertujuan untuk mempermudah proses pembelajaran program tahfidz mel
 
 ## Entitas dan Atribut:
 ### Santri
-. ID
-. Nama Santri
-. Usia
-. Jumlah Hafalan
-. Kontak
-. Alamat
-. Kelas
+* ID
+* Nama Santri
+* Usia
+* Jumlah Hafalan
+* Kontak
+* Alamat
+* Kelas
 
 ### Pembimbing
-. ID
-. Nama Pembimbing
-. Kontak
-. Alamat
+* ID
+* Nama Pembimbing
+* Kontak
+* Alamat
 
 ### Kelas
-. ID
-. ID santri
-. ID Pembimbing
-. Nama Kelas
-. Bahan ajar
-. Link meet
+* ID
+* ID santri
+* ID Pembimbing
+* Nama Kelas
+* Tanggal pertemuan
+* Bahan ajar
+* Kehadiran
 
 ### Setoran
-. ID santri
-. ID pembimbing
-. Tanggal
-. Progress Hafalan
+* ID santri
+* ID pembimbing
+* Tanggal
+* Progress Hafalan
 
-###Keterangan
-.ID setoran
-.Ziyadah
-.Murajaah
+### Keterangan
+* ID setoran
+* Ziyadah
+* Murajaah
