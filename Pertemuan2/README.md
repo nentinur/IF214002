@@ -42,7 +42,5 @@ Aplikasi ini bertujuan untuk mempermudah proses pembelajaran program tahfidz mel
 * Surat
 * Keterangan
 
-## ERD:
+### ERD:
 ![Pertemuan2 drawio (1)](https://user-images.githubusercontent.com/81434333/157802965-ff67f392-861c-48a0-b663-4be1be5de8e3.png)
-
-Link:[ERD](https://app.diagrams.net/?src=about#Hnentinur%2FIF214002%2Fmain%2FPertemuan2%2FPertemuan2.drawio)
