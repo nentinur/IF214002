@@ -18,31 +18,26 @@ Aplikasi ini bertujuan untuk mempermudah proses pembelajaran program tahfidz mel
 * Usia
 * Jumlah Hafalan
 * Kontak
-* Alamat
 * Kelas
 
 ### Pembimbing
 * ID
 * Nama Pembimbing
 * Kontak
-* Alamat
 
 ### Kelas
 * ID
 * ID santri
 * ID Pembimbing
-* Nama Kelas
-* Tanggal pertemuan
-* Bahan ajar
-* Kehadiran
+* Link Meeting
 
 ### Setoran
 * ID santri
 * ID pembimbing
 * Tanggal
-* Progress Hafalan
 
-### Keterangan
-* ID setoran
-* Ziyadah
-* Murajaah
+### Item Setoran
+* ID Setoran
+* Ayat
+* Surat
+* Keterangan
