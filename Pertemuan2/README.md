@@ -30,6 +30,7 @@ Aplikasi ini bertujuan untuk mempermudah proses pembelajaran program tahfidz mel
 * ID santri
 * ID Pembimbing
 * Link Meeting
+* Kriteria
 
 ### Setoran
 * ID santri
