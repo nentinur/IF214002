@@ -15,10 +15,9 @@ Aplikasi ini bertujuan untuk mempermudah proses pembelajaran program tahfidz mel
 ### Santri
 - */ ID
 - Nama Santri
-- Usia
-- Jumlah Hafalan
+- Password
 - Kontak
-- Kelas
+- Tanggal Lahir
 
 ### Pembimbing
 - */ ID
