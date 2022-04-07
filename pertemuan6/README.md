@@ -1,3 +1,10 @@
+# PERTEMUAN 6: NORMALISASI 
+Nama: Nenti Nurnaningsih
+NIM: 1207050090
+Kelas: IF-E
+Tanggal: 07-08/04/2022
+
+---
 ## Sebelum Normalisasi:
 
 #### Tabel santri
