@@ -2,6 +2,9 @@
 - 15 April 2022
 - Pemateri: Nanda Harsana Octavya
 
+Screenshoot Kehadiran:
+![Screenshot (219)](https://user-images.githubusercontent.com/81434333/163664163-ed88d369-e0a0-47ce-aae5-fa7e83011beb.png)
+
 ### Apa perbedaan Data Science, Data Analyst, dan Data Engineer?
 Data science = berhubugan dengan machine learning, gabungan matematika, bisnis, dan ilmu komputasi
 Data analyst = menganalisis data
@@ -11,12 +14,12 @@ Tipe Machine Learning:
 - Supervised Learning
   Pembelajaran yang dilakukan menggunakan data fitur (idependent variable) dan data target (dependent variable). cocok untuk sudah punya label (keterangan)
   Dibagi menjadi 2:
-  1. Regression:
+1. Regression:
     - Linear Regression
     - Support Vector Machine (Regression)
     - Decision Tree (Regression)
     - K-Nearest Neighbor (Regression)
-  2. Classification:
+2. Classification:
     - Logistik Regression
     - Support Vector Machine (Classifier)
     - Multi-Layer Perceptron (Classifier)
@@ -27,11 +30,11 @@ Tipe Machine Learning:
 - Unsupervised Learning
   Pembelajaran yang dilakukan menggunakan data fitur (independent variable) saja. cocok untuk data yang tidak punya label.
   Dibagi menjadi 2:
-  1. Clustering: mengelompokkan data berdasarkan pola pada fitur
+1. Clustering: mengelompokkan data berdasarkan pola pada fitur
     - K-Means
     - DBSCAN
     - Gaussian Mixture Model (GMM)
-  3. Dimensionality Reduction: mengurangi ukuran dimensi data dengan cara mencari fitur yang terbaik.
+2. Dimensionality Reduction: mengurangi ukuran dimensi data dengan cara mencari fitur yang terbaik.
     - Principal Component Analyst (CPA)
     - Singular Value Decomposition (SVD)
     - Linear Discriminant Analyst (LDA)
