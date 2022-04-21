@@ -19,4 +19,8 @@
    - Melakukan normalisasi pada basis data
 
 3. - a. Dimasa pandemi ini banyak kegitan yang sebelumnya dilakukan secara offline, kini harus berpindah ke online, tak terkecuali di bidang pembelajaran. Program tahfidz yang dulunya dilakukan secara offline, mau tidak mau harus beradaptasi juga. Aplikasi ini bertujuan untuk mempermudah proses pembelajaran program tahfidz melalui media online. Aplikasi akan melakukan pendataan santri yang mengikuti program, kemudian santri akan dikelompokkan berdasarkan jumlah hafalan menjadi beberapa kelas, setiap kelas memiliki 1 pembimbing tetap, sehingga 1 santri hanya memiliki 1 pembimbing, sedangkan 1 pembimbing memiliki beberapa santri. Proses setoran dilakukan memalui media meeting online. setiap kali santri melakukan setoran, maka data jumlah hafalan santri akan berubah, sistem akan otomatis mentrack data hafalan santri dan menentukan jumlah juz hafalan santri.
-  - b. 
+   - b. 
+    1. Melakukan pendataan santri yang mendaftar
+    2. Mengelompokan santri kedalam kelas-kelas agar pengajar lebih mudah dalam mengawasi hafalan santri
+    3. Melakukan pendataan progress hafalan santri
+    4. Menyediakan fitur meet conference untuk proses setoran
