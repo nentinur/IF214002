@@ -24,3 +24,5 @@
     2. Mengelompokan santri kedalam kelas-kelas agar pengajar lebih mudah dalam mengawasi hafalan santri
     3. Melakukan pendataan progress hafalan santri
     4. Menyediakan fitur meet conference untuk proses setoran
+  - c. ![ERD Notasi Chen](notasi-chen.drawio.png)
+  - d. ![ERD Crow Foot](crow-foot.drawio.png)
