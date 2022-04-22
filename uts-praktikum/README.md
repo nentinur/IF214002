@@ -1,3 +1,9 @@
+# UTS PRAKTIKUM BASIS DATA
+**Nama: Nenti Nurnaningsih**
+**NIM: 1207050090**
+**Kelas: IF - E**
+---
+
 ### SOAL
 1. Jelaskan contoh-contoh perintah SQL beserta kegunannya !
 2. Rancang solusi digital dari satu permasalahan yang ada di sekitar Anda.
@@ -36,7 +42,7 @@ A. Berdasarkan ERD yang telah dibuat, buatlah implementasi basis data dari ERD t
 
 2. DATABASE DATA NILAI MAHASISWA
 - ERD
-![ERD](uts-praktikum.drawio.png)
+- ![ERD](uts-praktikum.drawio.png)
 
 - SQL
 ```sql
