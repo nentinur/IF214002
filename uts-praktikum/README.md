@@ -34,9 +34,41 @@ A. Berdasarkan ERD yang telah dibuat, buatlah implementasi basis data dari ERD t
       DELETE FROM data_mahasiswa WHERE nim = '1207050090'
       ```
 
-2. Misalnya suatu toko ingin membuat database penjualan untuk tokonya
+2. DATABASE DATA NILAI MAHASISWA
+- ERD
+![ERD](uts-praktikum.drawio.png)
+
+- SQL
 ```sql
 
-CREATE TABLE dsb.
+CREATE TABLE data_mahasiswa (
+  nim INT(10) PRIMARY KEY,
+  nama VARCHAR(100),
+  tanggal_lahir DATE,
+  tempat_tinggal VARCHAR(200)
+);
+
+CREATE TABLE data_dosen (
+  id_dosen INT(10) PRIMARY KEY,
+  nama VARCHAR(100),
+  tanggal_lahir DATE,
+  tempat_tinggal VARCHAR(200)
+);
+
+CREATE TABLE mata_kuliah (
+  id_mata_kuliah VARCHAR(5) PRIMARY KEY,
+  id_dosen INt(10),
+  nama_mata_kuliah VARCHAR(50),
+  jumlah_sks INt(1),
+  CONSTRAINT id_dosen FOREIGN KEY (id_dosen) REFERENCES data_dosen (id_dosen)
+);
+
+CREATE TABLE nilai (
+  nim INT(10),
+  id_mata_kuliah VARCHAR(5),
+  nilai INt(3),
+  keterangan VARCHAR(10),
+  PRIMARY KEY(nim, id_mata_kuliah)
+);
 
 ```
