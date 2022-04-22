@@ -1,7 +1,7 @@
 # UTS PRAKTIKUM BASIS DATA
-**Nama: Nenti Nurnaningsih**
-**NIM: 1207050090**
-**Kelas: IF - E**
+- *Nama: Nenti Nurnaningsih*
+- *NIM: 1207050090*
+- *Kelas: IF - E*
 ---
 
 ### SOAL
