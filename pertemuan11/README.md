@@ -52,3 +52,31 @@ CREATE TABLE item_setoran (
   PRIMARY KEY (id_surat, id_ayat)
 );
 ```
+
+### DML
+- INSERT
+``` sql
+INSERT into pembimbing (id_pembimbing, kode_kelas, pass, nama, kontak, link_meeting) VALUES (1, "01A", "halohalo", "Halimatus Sholihah", "089923230001", "https://linkmeet01");
+INSERT into pembimbing (id_pembimbing, kode_kelas, pass, nama, kontak, link_meeting) VALUES (2, "02B", "sifat", "Siti Fatimah", "089923230002", "https://linkmeet02");
+INSERT into pembimbing (id_pembimbing, kode_kelas, pass, nama, kontak, link_meeting) VALUES (3, "01B", "haihai", "Haikal Sholihudin", "089923230003", "https://linkmeet03");
+
+INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (1, 1, "nenur", "Nenti Nurnaningsih", "087745677969", "2001-09-30");
+INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (2, 2, "nurnur", "Nurul Fauziyah", "089923230006", "2000-02-2000");
+INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (3, 3, "abri", "Abdul Rifa'i", "089923230007", "2002-02-02");
+
+INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (1, 1, "2022-05-20 07:30:34", "Ziyadah");
+INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (2, 2, "2022-05-20 07:48:22", "Murajaah");
+INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (3, 3, "2022-05-20 08:17:18", "Ziyadah");
+
+INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 110);
+INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 56);
+INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 89);
+
+INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 110);
+INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 56);
+INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 89);
+
+INSERT into ayat_surat (id_ayat, id_surat, no_ayat, juz) VALUES (7, 2, 1, 1);
+INSERT into ayat_surat (id_ayat, id_surat, no_ayat, juz) VALUES (57, 2, 50, 1);
+INSERT into ayat_surat (id_ayat, id_surat, no_ayat, juz) VALUES (3, 1, 3, 1);
+```
