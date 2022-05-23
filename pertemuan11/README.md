@@ -4,7 +4,6 @@
   - Contoh DML : INSERT INTO santri ( . . . ) VALUES ( . . . ), dsb.
   - Contoh DQL : 
     - Santri dengan setoran hafalan terbanyak : SELECT nama FROM santri INNER JOIN . . .
-    - Agregat pemasukan kencleng per bulan tahun 2022 : SELECT bulan, pemasukan FROM . . . INNER JOIN . . .
 
 ### DDL   
 - CREATE TABLE
@@ -31,7 +30,7 @@ CREATE TABLE setoran (
   id_setoran INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   id_santri INT NOT NULL,
   waktu DATETIME NOT NULL,
-  keterangan VARCHAR(50) NOT NULL,
+  keterangan VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE ayat_surat (
@@ -47,10 +46,15 @@ CREATE TABLE surat (
 );
 
 CREATE TABLE item_setoran (
-  id_surat INT NOT NULL AUTO_INCREMENT,
+  id_setoran INT NOT NULL,
   id_ayat INT NOT NULL,
-  PRIMARY KEY (id_surat, id_ayat)
+  PRIMARY KEY (id_setoran, id_ayat)
 );
+```
+- ALTER TABLE
+``` sql
+ALTER TABLE pembimbing ADD COLUMN(jenis_kelamin VARCHAR(1));
+ALTER table santri ADD COLUMn(jenis_kelamin VARCHAR(1));
 ```
 
 ### DML
@@ -68,15 +72,44 @@ INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (1, 1, "20
 INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (2, 2, "2022-05-20 07:48:22", "Murajaah");
 INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (3, 3, "2022-05-20 08:17:18", "Ziyadah");
 
-INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 110);
-INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 56);
-INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 89);
-
-INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 110);
-INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 56);
-INSERT into item_setoran (id_surat, id_ayat) VALUES (1, 89);
+INSERT into item_setoran (id_setoran, id_ayat) VALUES (1, 110);
+INSERT into item_setoran (id_setoran, id_ayat) VALUES (2, 56);
+INSERT into item_setoran (id_setoran, id_ayat) VALUES (3, 89);
 
 INSERT into ayat_surat (id_ayat, id_surat, no_ayat, juz) VALUES (7, 2, 1, 1);
 INSERT into ayat_surat (id_ayat, id_surat, no_ayat, juz) VALUES (57, 2, 50, 1);
 INSERT into ayat_surat (id_ayat, id_surat, no_ayat, juz) VALUES (3, 1, 3, 1);
+
+INSERT into surat (id_surat, nama_surat) VALUES (1, "Al-Fatihah");
+INSERT into surat (id_surat, nama_surat) VALUES (2, "Al-Baqarah");
+INSERT into surat (id_surat, nama_surat) VALUES (3, "Ali Imran");
 ```
+- UPDATE
+``` sql
+UPDATE pembimbing set jenis_kelamin = 'P' WHERE id_pembimbing = 1;
+UPDATE pembimbing set jenis_kelamin = 'P' WHERE id_pembimbing = 2;
+UPDATE pembimbing set jenis_kelamin = 'L' WHERE id_pembimbing = 3;
+```
+
+### DQL
+- SELECT
+``` sql
+SELECT nama FROM pembimbing WHERE jenis_kelamin = 'P';
+```
+- COUNT
+``` sql
+SELECT COUNT(*) FROM santri;
+```
+- SUM, CASE
+``` sql
+SELECT keterangan,
+    COUNT(*) AS jumlah_setoran,
+    ( SUM(
+        CASE WHEN keterangan="Ziyadah" THEN 1 ELSE 0 END)
+    ) AS jumlah_ziyadah,
+    (SUM(
+        CASE WHEN keterangan="Murajaah" THEN 1 ELSE 0 END)
+    ) AS jumlah_murajaah
+FROM setoran;
+```
+- JOIN
