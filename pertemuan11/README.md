@@ -1,9 +1,5 @@
 ## Asesmen 
 - Buat DDL, sampel DML, dan DQL untuk proyek besar teman-teman
-  - Contoh DDL : CREATE TABLE santri ( . . . ), dsb.
-  - Contoh DML : INSERT INTO santri ( . . . ) VALUES ( . . . ), dsb.
-  - Contoh DQL : 
-    - Santri dengan setoran hafalan terbanyak : SELECT nama FROM santri INNER JOIN . . .
 
 ### DDL   
 - CREATE TABLE
@@ -65,7 +61,7 @@ INSERT into pembimbing (id_pembimbing, kode_kelas, pass, nama, kontak, link_meet
 INSERT into pembimbing (id_pembimbing, kode_kelas, pass, nama, kontak, link_meeting) VALUES (3, "01B", "haihai", "Haikal Sholihudin", "089923230003", "https://linkmeet03");
 
 INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (1, 1, "nenur", "Nenti Nurnaningsih", "087745677969", "2001-09-30");
-INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (2, 2, "nurnur", "Nurul Fauziyah", "089923230006", "2000-02-2000");
+INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (2, 2, "nurnur", "Nurul Fauziyah", "089923230006", "2000-02-20");
 INSERT into santri (id_santri, id_pembimbing, pass, nama, kontak, tanggal_lahir) VALUES (3, 3, "abri", "Abdul Rifa'i", "089923230007", "2002-02-02");
 
 INSERT into setoran (id_setoran, id_santri, waktu, keterangan) VALUES (1, 1, "2022-05-20 07:30:34", "Ziyadah");
@@ -89,6 +85,10 @@ INSERT into surat (id_surat, nama_surat) VALUES (3, "Ali Imran");
 UPDATE pembimbing set jenis_kelamin = 'P' WHERE id_pembimbing = 1;
 UPDATE pembimbing set jenis_kelamin = 'P' WHERE id_pembimbing = 2;
 UPDATE pembimbing set jenis_kelamin = 'L' WHERE id_pembimbing = 3;
+
+UPDATE santri set jenis_kelamin = 'P' WHERE id_pembimbing = 1;
+UPDATE santri set jenis_kelamin = 'P' WHERE id_pembimbing = 2;
+UPDATE santri set jenis_kelamin = 'L' WHERE id_pembimbing = 3;
 ```
 
 ### DQL
@@ -112,4 +112,10 @@ SELECT keterangan,
     ) AS jumlah_murajaah
 FROM setoran;
 ```
-- JOIN
+- JOIN (mencari santri dengan hafalan terbanyak
+``` sql
+SELECT santri.nama, setoran.id_setoran, item_setoran.id_ayat FROM setoran 
+JOIN santri ON setoran.id_santri = santri.id_santri
+JOIN item_setoran On setoran.id_setoran = item_setoran.id_setoran
+ORDER by item_setoran.id_ayat DESC;
+```
