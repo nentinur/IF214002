@@ -9,12 +9,13 @@
 2. - Ingin tahu perkembangan hafalan santri perbulan
      - perkembangan per setoran santri
        - visualisasi: Line Chart
-       - Data: Bulan, tahun, setoran ke, jumlah halaman yang disetorkan (Ziyadah)
-       - Data: Bulan, tahun, setoran ke, jumlah halaman yang disetorkan (Murajaah)
+       - Data: Bulan, tahun, setoran ke, jumlah ayat yang disetorkan (Ziyadah & Murajaah)
+     ![progres hafalan santri](progres-santri.png)
+     
      - perkembangan hafalan santri per bulan
        - visualisasi: Bar Chart
-       - Data: Nama santri, bulan, tahun, jumlah setoran, jumlah halaman yang disetorkan (Ziyadah)
-       - Data: Nama santri, bulan, tahun, jumlah setoran, jumlah halaman yang disetorkan (Murajaah)
+       - Data: Nama santri, bulan, tahun, jumlah setoran, jumlah ayat yang disetorkan (Ziyadah & Murajaah)
+     ![progres keleruluhan santri](progres-bulanan.png)
 
 3. - Perkembangan per setoran santri Ziyadah
 ``` sql
