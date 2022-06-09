@@ -10,12 +10,12 @@
      - perkembangan per setoran santri
        - visualisasi: Line Chart
        - Data: Bulan, tahun, setoran ke, jumlah ayat yang disetorkan (Ziyadah & Murajaah)
-     ![progres hafalan santri](progres-santri.png)
+     ![progres hafalan santri](santri.png)
      
      - perkembangan hafalan santri per bulan
        - visualisasi: Bar Chart
        - Data: Nama santri, bulan, tahun, jumlah setoran, jumlah ayat yang disetorkan (Ziyadah & Murajaah)
-     ![progres keleruluhan santri](progres-bulanan.png)
+     ![progres keleruluhan santri](bulanan.png)
 
 3. - Perkembangan per setoran santri Ziyadah
 ``` sql
