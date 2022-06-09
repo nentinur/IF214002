@@ -16,6 +16,33 @@
        - Data: Nama santri, bulan, tahun, jumlah setoran, jumlah halaman yang disetorkan (Ziyadah)
        - Data: Nama santri, bulan, tahun, jumlah setoran, jumlah halaman yang disetorkan (Murajaah)
 
-3. ``` sql
- 
-   ```
+3. - Perkembangan per setoran santri Ziyadah
+``` sql
+     SELECT santri.nama, setoran.id_setoran, COUNT(item_setoran.id_ayat) FROM santri 
+     INNER JOIN setoran ON santri.id_santri = setoran.id_santri 
+     INNER JOIN item_setoran ON setoran.id_setoran = item_setoran.id_setoran 
+     WHERE setoran.keterangan = "Ziyadah" && item_setoran.id_setoran = 1;
+```
+   - Perkembangan per setoran santri Murajaah
+``` sql
+     SELECT santri.nama, setoran.id_setoran, COUNT(item_setoran.id_ayat) FROM santri 
+     INNER JOIN setoran ON santri.id_santri = setoran.id_santri 
+     INNER JOIN item_setoran ON setoran.id_setoran = item_setoran.id_setoran 
+     WHERE setoran.keterangan = "Murajaah" && item_setoran.id_setoran = 1;
+```
+   - Perkembangan hafalan santri perbulan (Ziyadah)
+``` sql
+     SELECT santri.nama, setoran.id_setoran, COUNT(item_setoran.id_ayat) FROM santri 
+     INNER JOIN setoran ON santri.id_santri = setoran.id_santri 
+     INNER JOIN item_setoran ON setoran.id_setoran = item_setoran.id_setoran 
+     WHERE setoran.keterangan = "Ziyadah"
+     GROUP BY santri.nama;
+```
+   - Perkembangan hafalan santri perbulan (Murajaah)
+``` sql
+     SELECT santri.nama, setoran.id_setoran, COUNT(item_setoran.id_ayat) FROM santri 
+     INNER JOIN setoran ON santri.id_santri = setoran.id_santri 
+     INNER JOIN item_setoran ON setoran.id_setoran = item_setoran.id_setoran 
+     WHERE setoran.keterangan = "Murajaah"
+     GROUP BY santri.nama;
+```
