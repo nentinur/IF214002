@@ -9,8 +9,11 @@ Untuk saat ini aplikasi baru bisa untuk mengolah data saja, harapannya, kedepann
 Selain itu, saya ingin menjadikan aplikasi ini sebagai pegangan santri tahfidz, untuk mengatur jadwal harian, jadwal murajaah, jadwal setoran, dan memonitor hafalan.
 
 ## Perancangan Database:
-- Database Relational
+### Database Relational
 ![Database Relational](relasi.drawio.png)
 
-- Entity Relation Diagram
+### Entity Relation Diagram
 ![ERD](erd.drawio.png)
+
+### Source Code:
+[Source Code Final Project](https://github.com/nentinur/final-project)
