@@ -17,7 +17,7 @@
 3. ERD:
   ![ERD](erd.drawio.png)
 
-4. SQL
+4. DDL
   ``` sql
   CREATE TABLE pembimbing (
 id_pembimbing INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -63,8 +63,10 @@ id_setoran INT NOT NULL,
 id_ayat INT NOT NULL,
 PRIMARY KEY (id_setoran, id_ayat)
 );
+```
 
-
+DML
+``` sql
 INSERT into pembimbing (id_pembimbing, kode_kelas, nama, jenis_kelamin, kontak, alamat) VALUES 
 (1, "A01", "Halimatus Sholihah", "Perempuan", "089923230001", "Jakarta"),
 (2, "A02", "Siti Fatimah", "Perempuan", "089923230002", "Bandung"),
@@ -104,10 +106,30 @@ INSERT into surat (id_surat, nama_surat) VALUES
 (2, "Al-Baqarah"),
 (3, "Ali Imran"),
 (4, "An-Nisaa");
+```
 
+DQL
+menampilkan data santri, kelas, dan nama pembimbingnya
+``` sql
 SELECT santri.nama, pembimbing.kode_kelas AS kelas, pembimbing.nama AS nama_pembimbing FROM santri INNER JOIN pembimbing ON santri.id_pembimbing = pembimbing.id_pembimbing;
-
+```
+menampilkan nama santri dan data setorannya
+``` sql
 SELECT santri.nama, setoran.* FROM santri INNER JOIN setoran ON santri.id_santri = setoran.id_santri;
-
-
+```
+menampilkan jumlah semua santri
+``` sql
+SELECT COUNT(*) FROM santri;
+```
+menampilkan jumlah setoran santri berdasarkan ziyadah dan setoran
+``` sql
+SELECT keterangan,
+    COUNT(*) AS jumlah_setoran,
+    ( SUM(
+        CASE WHEN keterangan="Ziyadah" THEN 1 ELSE 0 END)
+    ) AS jumlah_ziyadah,
+    (SUM(
+        CASE WHEN keterangan="Murajaah" THEN 1 ELSE 0 END)
+    ) AS jumlah_murajaah
+FROM setoran;
   ```
